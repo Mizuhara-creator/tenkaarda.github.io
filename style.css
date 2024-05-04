@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.character-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Agar konten bisa beradaptasi */
+    margin-top: 20px;
+}
+
+.character-image-container {
+    margin-right: 20px;
+}
+
+.character-image {
+    max-width: 250px; /* Ukuran gambar bisa disesuaikan */
+    border-radius: 10px;
+}
+
+.description-container {
+    text-align: left;
+}
+
+.character-details {
+    margin: 20px;
+    display: none; /* Disembunyikan awalnya */
+    opacity: 0; /* Transparan saat tersembunyi */
+    transition: opacity 0.5s; /* Transisi saat tampil */
+}
+
+.character-details.show {
+    display: block; /* Ditampilkan */
+    opacity: 1; /* Transisi ke 100% opacity */
+}
+
+.detail-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk efek 3D */
+}
+
+.group-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Agar konten dapat beradaptasi */
+    margin-top: 20px;
+}
+
+.member {
+    text-align: center;
+    max-width: 200px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.member-image {
+    max-width: 100%; 
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) { /* Untuk layar tablet dan ponsel */
+    .character-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .character-image-container {
+        margin-right: 0; /* Atur ulang margin */
+    }
+
+    .group-members {
+        flex-direction: column; /* Menjadi satu kolom */
+        align-items: center; /* Rata tengah */
+    }
+
+    .member {
+        margin-bottom: 10px; /* Tambahkan jarak antar elemen */
+    }
+}
